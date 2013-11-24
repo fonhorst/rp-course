@@ -1,0 +1,87 @@
+package simulations
+
+import org.scalatest.FunSuite
+
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
+
+@RunWith(classOf[JUnitRunner])
+class CircuitSuite extends CircuitSimulator with FunSuite {
+  val InverterDelay = 1
+  val AndGateDelay = 3
+  val OrGateDelay = 5
+  
+  test("andGate example") {
+    val in1, in2, out = new Wire
+    andGate(in1, in2, out)
+    in1.setSignal(false)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === false, "and 1")
+
+    in1.setSignal(true)
+    run
+    
+    assert(out.getSignal === false, "and 2")
+
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 3")
+  }
+  
+  test("orGate example"){
+	  orGateHelper(orGate)
+  }
+  
+  test("orGate2 example"){
+	  orGateHelper(orGate2)
+  }
+  
+  test("demux test"){
+    
+  }
+
+  //
+  // to complete with tests for orGate, demux, ...
+  //
+  
+  private def orGateHelper(orGateMethod:(Wire,Wire,Wire)=>Unit){
+     val in1, in2, out = new Wire
+    orGateMethod(in1, in2, out)
+    in1.setSignal(false)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === false, "and 1")
+
+    in1.setSignal(true)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === true, "and 2")
+
+    in1.setSignal(false)
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 3")
+    
+    in1.setSignal(true)
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 4")
+  }
+
+}
+
+object CircuitSuite{
+  def genMux(n:Int):(List[Wire],List[Wire]) =
+  {
+    val ctrls = for{x <- (1 to n)} yield new Wire
+    val outs = for{x <- (1 to 2^n)} yield new Wire
+    (ctrls,outs)		
+  }
+}

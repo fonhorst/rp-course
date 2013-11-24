@@ -1,0 +1,1118 @@
+!SESSION 2013-11-04 19:48:23.234 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:50:34.142
+!MESSAGE Connection to http://download.eclipse.org/releases/kepler/p2.index failed on download.eclipse.org: Name or service not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1286)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1239)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at org.eclipse.equinox.internal.p2.operations.PlannerResolutionJob.runModal(PlannerResolutionJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.ProvisioningOperationWizard$2.run(ProvisioningOperationWizard.java:289)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:50:34.445
+!MESSAGE Connection to http://download.eclipse.org/eclipse/updates/4.3/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1243)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at org.eclipse.equinox.internal.p2.operations.PlannerResolutionJob.runModal(PlannerResolutionJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.ProvisioningOperationWizard$2.run(ProvisioningOperationWizard.java:289)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:50:54.696
+!MESSAGE Connection to http://download.scala-ide.org/sdk/e38/scala210/stable/site/p2.index failed on download.scala-ide.org: Name or service not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.scala-ide.org: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1286)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1239)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.gatherAvailableInstallableUnits(SimplePlanner.java:267)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getSolutionFor(SimplePlanner.java:328)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.getProvisioningPlan(SimplePlanner.java:387)
+	at org.eclipse.equinox.internal.p2.operations.PlannerResolutionJob.runModal(PlannerResolutionJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.ProvisioningOperationWizard$2.run(ProvisioningOperationWizard.java:289)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:51:30.664
+!MESSAGE Connection to http://download.eclipse.org/eclipse/updates/4.3/p2.index failed on download.eclipse.org: Name or service not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1286)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1239)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.phases.Sizing.completePhase(Sizing.java:91)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.getSize(ProvUI.java:235)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.SizeComputingWizardPage$1.run(SizeComputingWizardPage.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:51:30.897
+!MESSAGE Connection to http://download.eclipse.org/releases/kepler/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1243)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.phases.Sizing.completePhase(Sizing.java:91)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.getSize(ProvUI.java:235)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.SizeComputingWizardPage$1.run(SizeComputingWizardPage.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-11-04 19:51:51.145
+!MESSAGE Connection to http://download.scala-ide.org/sdk/e38/scala210/stable/site/p2.index failed on download.scala-ide.org: Name or service not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.scala-ide.org: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1286)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1239)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1091)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:242)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:130)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1074)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:621)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:879)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:570)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:422)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.phases.Sizing.completePhase(Sizing.java:91)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.getSize(ProvUI.java:235)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.SizeComputingWizardPage$1.run(SizeComputingWizardPage.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2013-11-04 19:53:11.946
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2013-11-04 19:53:11.946
+!MESSAGE session context was:(profile=SDKProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.946
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.rcp.feature.source,1.1.0.dist-785EoAUkccGofGMiW9DK982713B5
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.947
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.help.source,1.4.0.dist-8t7kFQYFDiWRagJwV96CIM1
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.947
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.webapp.source,3.6.100.dist
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.947
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.pde.build.source,3.8.0.dist
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.947
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.pde.source,3.8.0.dist-7c7vFiuFALX8A
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.947
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.pde.ui.source,3.7.0.dist
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-11-04 19:53:11.948
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.trace.source,1.0.0.dist
+!SESSION 2013-11-16 19:23:32.531 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.scala-ide.sdt.core 1 0 2013-11-16 20:02:53.857
+!MESSAGE Timeout while resolving hyperlink in /opt/workspace/rp-course/quickcheck/src/main/scala/quickcheck/QuickCheck.scala at: offset: 256, length: 0
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.274
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.313
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.314
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.314
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.315
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2013-11-16 20:33:48.316
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:06.272
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:06.272
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:06.298
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:06.298
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:15.312
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:15.312
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:15.344
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:15.344
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:28.952
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:28.952
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:29.005
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:29.005
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:36.483
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:36.483
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jdt.debug 4 120 2013-11-16 20:34:36.583
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:36.583
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2013-11-16 20:34:36.583
+!MESSAGE Exception processing async thread queue
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.getTypeName(SourceBasedSourceGenerator.java:783)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildMethodDeclaration(SourceBasedSourceGenerator.java:478)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildBody(SourceBasedSourceGenerator.java:419)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeBody(SourceBasedSourceGenerator.java:360)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.buildTypeDeclaration(SourceBasedSourceGenerator.java:645)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.SourceBasedSourceGenerator.endVisit(SourceBasedSourceGenerator.java:1088)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:487)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:2585)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:220)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2514)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.createEvaluationSourceFromSource(EvaluationSourceGenerator.java:152)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.EvaluationSourceGenerator.getSource(EvaluationSourceGenerator.java:233)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.getCompiledExpression(ASTEvaluationEngine.java:340)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine.evaluate(ASTEvaluationEngine.java:134)
+	at org.eclipse.jdt.internal.debug.ui.JavaWatchExpressionDelegate$EvaluationRunnable.run(JavaWatchExpressionDelegate.java:142)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3158)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-11-23 18:59:23.191 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /opt/workspace/rp-course -os linux -ws gtk -arch x86_64
+
+!ENTRY org.scala-ide.sdt.core 1 0 2013-11-23 19:06:26.762
+!MESSAGE Timeout while resolving hyperlink in /opt/workspace/rp-course/simulations/src/test/scala/simulations/CircuitSuite.scala at: offset: 464, length: 0
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 19:46:43.543
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DetachedDropAgent.drop(DetachedDropAgent.java:60)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DragAgent.dragFinished(DragAgent.java:159)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.PartDragAgent.dragFinished(PartDragAgent.java:105)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager.finishDrag(DnDManager.java:266)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager.startDrag(DnDManager.java:233)
+	at org.eclipse.e4.ui.workbench.addons.dndaddon.DnDManager$1.dragDetected(DnDManager.java:88)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 20:50:58.189
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4378)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:481)
+	at org.eclipse.swt.widgets.MenuItem.<init>(MenuItem.java:125)
+	at org.eclipse.jface.action.Separator.fill(Separator.java:55)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:538)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:417)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:388)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1397)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3784)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3353)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 20:50:59.121
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NegativeArraySizeException
+	at org.eclipse.swt.widgets.Menu.getItems(Menu.java:500)
+	at org.eclipse.swt.widgets.Menu.getNameText(Menu.java:518)
+	at org.eclipse.swt.widgets.Widget.toString(Widget.java:2019)
+	at java.lang.String.valueOf(String.java:2854)
+	at java.lang.StringBuilder.append(StringBuilder.java:128)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.trace(MenuManagerShowProcessor.java:52)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.cleanUp(MenuManagerShowProcessor.java:224)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToShow(MenuManagerShowProcessor.java:90)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPreHelper(MenuManagerEventHelper.java:43)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1397)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3784)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3353)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 20:51:00.345
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NegativeArraySizeException
+	at org.eclipse.swt.widgets.Menu.getItems(Menu.java:500)
+	at org.eclipse.swt.widgets.Menu.getNameText(Menu.java:518)
+	at org.eclipse.swt.widgets.Widget.toString(Widget.java:2019)
+	at java.lang.String.valueOf(String.java:2854)
+	at java.lang.StringBuilder.append(StringBuilder.java:128)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.trace(MenuManagerShowProcessor.java:52)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.cleanUp(MenuManagerShowProcessor.java:224)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToShow(MenuManagerShowProcessor.java:90)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPreHelper(MenuManagerEventHelper.java:43)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1397)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3784)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3353)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 20:54:36.494
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NegativeArraySizeException
+	at org.eclipse.swt.widgets.Menu.getItems(Menu.java:500)
+	at org.eclipse.swt.widgets.Menu.getNameText(Menu.java:518)
+	at org.eclipse.swt.widgets.Widget.toString(Widget.java:2019)
+	at java.lang.String.valueOf(String.java:2854)
+	at java.lang.StringBuilder.append(StringBuilder.java:128)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.trace(MenuManagerShowProcessor.java:52)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.cleanUp(MenuManagerShowProcessor.java:224)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToShow(MenuManagerShowProcessor.java:90)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPreHelper(MenuManagerEventHelper.java:43)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1397)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3784)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3353)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.ui 4 0 2013-11-23 20:54:37.433
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NegativeArraySizeException
+	at org.eclipse.swt.widgets.Menu.getItems(Menu.java:500)
+	at org.eclipse.swt.widgets.Menu.getNameText(Menu.java:518)
+	at org.eclipse.swt.widgets.Widget.toString(Widget.java:2019)
+	at java.lang.String.valueOf(String.java:2854)
+	at java.lang.StringBuilder.append(StringBuilder.java:128)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.trace(MenuManagerShowProcessor.java:52)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.cleanUp(MenuManagerShowProcessor.java:224)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToShow(MenuManagerShowProcessor.java:90)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPreHelper(MenuManagerEventHelper.java:43)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:474)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1397)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:198)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3784)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3353)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SESSION 2013-11-23 21:44:48.797 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-11-23 21:44:58.885
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-11-25 01:27:57.217 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:28:18.869
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-reflect/scala-reflect-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:28:18.914
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-swing/scala-swing-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:28:18.920
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalacheck/scalacheck_2.10/scalacheck_2.10-1.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:28:18.921
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-actors/scala-actors-2.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:28:18.922
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalatest/scalatest_2.10/scalatest_2.10-1.9.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.938
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-scala/rxjava-scala-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.939
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-core/rxjava-core-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.939
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-native_2.10/json4s-native_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.940
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-core_2.10/json4s-core_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.940
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-ast_2.10/json4s-ast_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.941
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.thoughtworks.paranamer/paranamer/paranamer-2.5.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.941
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.mockito/mockito-all/mockito-all-1.9.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.942
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scalap/scalap-2.10.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.942
+!MESSAGE Invalid ZIP archive: lib_managed/jars/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.943
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.ning/async-http-client/async-http-client-1.7.16.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.943
+!MESSAGE Invalid ZIP archive: lib_managed/bundles/io.netty/netty/netty-3.6.3.Final.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.944
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-api/slf4j-api-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.944
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-simple/slf4j-simple-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.945
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.squareup.retrofit/retrofit/retrofit-1.0.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.945
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.google.code.gson/gson/gson-2.2.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.945
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-tools.testing/test-interface/test-interface-0.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.946
+!MESSAGE Invalid ZIP archive: lib_managed/jars/junit/junit/junit-4.10.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:29:09.946
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.hamcrest/hamcrest-core/hamcrest-core-1.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:30:13.376
+!MESSAGE Invalid ZIP archive: lib_managed/jars/junit/junit/junit-4.10.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:30:17.266
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.squareup.retrofit/retrofit/retrofit-1.0.0.jar [in simulations]
+!SESSION 2013-11-25 01:34:07.983 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.008
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-scala/rxjava-scala-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.014
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-core/rxjava-core-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.015
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-native_2.10/json4s-native_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.015
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-core_2.10/json4s-core_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.016
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-ast_2.10/json4s-ast_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.016
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.thoughtworks.paranamer/paranamer/paranamer-2.5.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.017
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.mockito/mockito-all/mockito-all-1.9.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.018
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scalap/scalap-2.10.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.080
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-reflect/scala-reflect-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.081
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-swing/scala-swing-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.081
+!MESSAGE Invalid ZIP archive: lib_managed/jars/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.082
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.ning/async-http-client/async-http-client-1.7.16.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.083
+!MESSAGE Invalid ZIP archive: lib_managed/bundles/io.netty/netty/netty-3.6.3.Final.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.084
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-api/slf4j-api-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.085
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-simple/slf4j-simple-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.086
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.squareup.retrofit/retrofit/retrofit-1.0.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.087
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.google.code.gson/gson/gson-2.2.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.088
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalacheck/scalacheck_2.10/scalacheck_2.10-1.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.089
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-tools.testing/test-interface/test-interface-0.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.090
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-actors/scala-actors-2.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.091
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalatest/scalatest_2.10/scalatest_2.10-1.9.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.092
+!MESSAGE Invalid ZIP archive: lib_managed/jars/junit/junit/junit-4.10.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:34:30.093
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.hamcrest/hamcrest-core/hamcrest-core-1.1.jar [in simulations]
+!SESSION 2013-11-25 01:37:55.096 -----------------------------------------------
+eclipse.buildId=3.0.2-vfinal-20131028-1923-Typesafe
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.079
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-scala/rxjava-scala-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.087
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-core/rxjava-core-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.088
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-native_2.10/json4s-native_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.089
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-core_2.10/json4s-core_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.090
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-ast_2.10/json4s-ast_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.090
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.thoughtworks.paranamer/paranamer/paranamer-2.5.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.091
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.mockito/mockito-all/mockito-all-1.9.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.092
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scalap/scalap-2.10.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.211
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-reflect/scala-reflect-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.212
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-swing/scala-swing-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.213
+!MESSAGE Invalid ZIP archive: lib_managed/jars/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.213
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.ning/async-http-client/async-http-client-1.7.16.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.214
+!MESSAGE Invalid ZIP archive: lib_managed/bundles/io.netty/netty/netty-3.6.3.Final.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.215
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-api/slf4j-api-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.216
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-simple/slf4j-simple-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.216
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.squareup.retrofit/retrofit/retrofit-1.0.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.217
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.google.code.gson/gson/gson-2.2.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.218
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalacheck/scalacheck_2.10/scalacheck_2.10-1.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.219
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-tools.testing/test-interface/test-interface-0.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.220
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-actors/scala-actors-2.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.220
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalatest/scalatest_2.10/scalatest_2.10-1.9.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.221
+!MESSAGE Invalid ZIP archive: lib_managed/jars/junit/junit/junit-4.10.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:38:18.222
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.hamcrest/hamcrest-core/hamcrest-core-1.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.135
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-scala/rxjava-scala-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.141
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.netflix.rxjava/rxjava-core/rxjava-core-0.14.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.143
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-native_2.10/json4s-native_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.171
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-core_2.10/json4s-core_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.172
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.json4s/json4s-ast_2.10/json4s-ast_2.10-3.2.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.172
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.thoughtworks.paranamer/paranamer/paranamer-2.5.6.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.173
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.mockito/mockito-all/mockito-all-1.9.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.173
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scalap/scalap-2.10.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.239
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-reflect/scala-reflect-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.240
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-swing/scala-swing-2.10.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.240
+!MESSAGE Invalid ZIP archive: lib_managed/jars/net.databinder.dispatch/dispatch-core_2.10/dispatch-core_2.10-0.11.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.241
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.ning/async-http-client/async-http-client-1.7.16.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.242
+!MESSAGE Invalid ZIP archive: lib_managed/bundles/io.netty/netty/netty-3.6.3.Final.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.243
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-api/slf4j-api-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.243
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.slf4j/slf4j-simple/slf4j-simple-1.7.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.244
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.squareup.retrofit/retrofit/retrofit-1.0.0.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.245
+!MESSAGE Invalid ZIP archive: lib_managed/jars/com.google.code.gson/gson/gson-2.2.3.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.245
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalacheck/scalacheck_2.10/scalacheck_2.10-1.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.246
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-tools.testing/test-interface/test-interface-0.5.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.247
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scala-lang/scala-actors/scala-actors-2.10.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.248
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.scalatest/scalatest_2.10/scalatest_2.10-1.9.1.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.248
+!MESSAGE Invalid ZIP archive: lib_managed/jars/junit/junit/junit-4.10.jar [in simulations]
+
+!ENTRY org.eclipse.jdt.core 4 0 2013-11-25 01:46:22.249
+!MESSAGE Invalid ZIP archive: lib_managed/jars/org.hamcrest/hamcrest-core/hamcrest-core-1.1.jar [in simulations]

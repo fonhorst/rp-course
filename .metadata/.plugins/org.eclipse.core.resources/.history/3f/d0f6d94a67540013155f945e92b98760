@@ -1,0 +1,123 @@
+package simulations
+
+import org.scalatest.FunSuite
+
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
+
+@RunWith(classOf[JUnitRunner])
+class CircuitSuite extends CircuitSimulator with FunSuite {
+  val InverterDelay = 1
+  val AndGateDelay = 3
+  val OrGateDelay = 5
+  
+  test("andGate example") {
+    val in1, in2, out = new Wire
+    andGate(in1, in2, out)
+    in1.setSignal(false)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === false, "and 1")
+
+    in1.setSignal(true)
+    run
+    
+    assert(out.getSignal === false, "and 2")
+
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 3")
+  }
+  
+  test("orGate example"){
+	  orGateHelper(orGate)
+  }
+  
+  test("orGate2 example"){
+	  orGateHelper(orGate2)
+  }
+  
+  test("trivial demux test"){
+    import CircuitSuite._
+    val (a,b) = genMux(0)
+    val in = new Wire
+    demux(in, a, b)
+    
+    in.setSignal(false)
+    run
+    
+    assert( isMatch(b,List(false)) === false, "and 1")
+    
+    in.setSignal(true)
+    run
+    
+    assert( isMatch(b,List(true)) === true, "and 2")
+    
+    
+  }
+
+  //
+  // to complete with tests for orGate, demux, ...
+  //
+  
+  private def orGateHelper(orGateMethod:(Wire,Wire,Wire)=>Unit){
+     val in1, in2, out = new Wire
+    orGateMethod(in1, in2, out)
+    in1.setSignal(false)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === false, "and 1")
+
+    in1.setSignal(true)
+    in2.setSignal(false)
+    run
+    
+    assert(out.getSignal === true, "and 2")
+
+    in1.setSignal(false)
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 3")
+    
+    in1.setSignal(true)
+    in2.setSignal(true)
+    run
+    
+    assert(out.getSignal === true, "and 4")
+  }
+
+}
+
+object CircuitSuite{
+  def genMux(n:Int):(List[Wire],List[Wire]) =
+  {
+    val ctrls = for{x <- (1 to n)} yield new Wire
+    val outs = for{x <- (1 to 2^n)} yield new Wire
+    (ctrls.toList,outs.toList)		
+  }
+  
+  def setSignals(ins:List[Wire])(sigs:List[Boolean])={
+    
+    if (ins.length != sigs.length) throw new Exception("the lengthes are not equal, ins:" 
+        + ins.length + " sigs: " + sigs.length);
+    
+    def rec(ins:List[Wire],sigs:List[Boolean]):Unit = (ins,sigs) match {
+      case (Nil,Nil) => ()
+      case (h1::t1,h2::t2) => h1.setSignal(h2); rec(t1,t2); 
+    }
+    rec(ins,sigs)
+  }
+  
+  def isMatch(a:List[Wire], b:List[Boolean]):Boolean=(a,b) match {
+    case (Nil,Nil) => true
+    case (_,Nil) => false
+    case (Nil,_) => false
+    case (h1::t1,h2::t2) if (h1.getSignal != h2) => false
+    case (h1::t1,h2::t2) if (h1.getSignal == h2) => isMatch(t1,t2)
+  }
+  
+}

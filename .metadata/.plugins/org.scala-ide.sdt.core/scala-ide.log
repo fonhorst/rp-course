@@ -37,3 +37,38 @@
 2013-11-25 01:54:25,429 ERROR [Worker-0] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 2013-11-25 01:54:25,457 ERROR [Worker-0] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
 2013-11-25 01:54:25,457 ERROR [Worker-0] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-26 21:54:14,543 ERROR [Worker-6] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-26 21:54:14,586 ERROR [Worker-6] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-26 21:54:14,586 ERROR [Worker-6] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-26 23:37:47,532  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-26 23:37:47,741  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-26 23:37:47,943  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-26 23:52:34,630  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-26 23:52:34,832  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-26 23:52:35,033  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-27 00:14:41,778 ERROR [Worker-4] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-27 00:14:41,784 ERROR [Worker-4] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-27 00:14:41,785 ERROR [Worker-4] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-27 22:31:16,028 ERROR [Worker-6] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-27 22:31:16,067 ERROR [Worker-6] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-27 22:31:16,068 ERROR [Worker-6] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-28 23:30:50,600 ERROR [Worker-13] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-28 23:30:50,618 ERROR [Worker-13] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-28 23:30:50,618 ERROR [Worker-13] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-28 23:44:18,148  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-28 23:44:18,542  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-28 23:44:18,906  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-30 13:04:53,590 ERROR [Worker-0] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-30 13:04:53,665 ERROR [Worker-0] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-30 13:04:53,666 ERROR [Worker-0] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-30 13:10:22,180 ERROR [Worker-1] - System.err - [Fatal Error] :361:7770: Premature end of file.
+2013-11-30 13:14:45,823  WARN [Worker-0] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-30 13:36:43,534 ERROR [Worker-0] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-30 13:36:43,570 ERROR [Worker-0] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-30 13:36:43,571 ERROR [Worker-0] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-30 13:44:36,371  WARN [Worker-4] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-30 13:44:37,272  WARN [Worker-4] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2013-11-30 13:45:46,998 ERROR [Worker-0] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2013-11-30 13:45:47,113 ERROR [Worker-0] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2013-11-30 13:45:47,113 ERROR [Worker-0] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2013-11-30 13:46:36,709  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.

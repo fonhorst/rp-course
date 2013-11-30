@@ -1,0 +1,66 @@
+[0m[[0minfo[0m] [0m[32mNodeScalaSuite:[0m[0m
+[0m[[0minfo[0m] [0m[31m- A Future should always be created *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:252)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.package$FutureCompanionOps$.always$extension(package.scala:19)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$1.apply$mcV$sp(tests.scala:21)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$1.apply(tests.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$1.apply(tests.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite.withFixture(tests.scala:18)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anonfun$runTest$1.apply(FunSuite.scala:1271)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- A Future should never be created *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:252)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.package$FutureCompanionOps$.never$extension(package.scala:25)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$2.apply$mcV$sp(tests.scala:27)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$2.apply(tests.scala:26)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$2.apply(tests.scala:26)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite.withFixture(tests.scala:18)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anonfun$runTest$1.apply(FunSuite.scala:1271)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- CancellationTokenSource should allow stopping the computation *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:252)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.package$CancellationTokenSource$.apply(package.scala:135)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$3.apply$mcV$sp(tests.scala:38)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$3.apply(tests.scala:37)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$3.apply(tests.scala:37)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite.withFixture(tests.scala:18)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anonfun$runTest$1.apply(FunSuite.scala:1271)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- Listener should serve the next request as a future *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:252)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScala$Listener$class.nextRequest(nodescala.scala:114)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyListener.nextRequest(tests.scala:65)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$4.test$1(tests.scala:118)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$4.apply$mcV$sp(tests.scala:125)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$4.apply(tests.scala:113)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$4.apply(tests.scala:113)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite.withFixture(tests.scala:18)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- Server should serve requests *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:252)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScala$class.start(nodescala.scala:44)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyServer.start(tests.scala:97)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$5.apply$mcV$sp(tests.scala:133)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$5.apply(tests.scala:131)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$5.apply(tests.scala:131)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite.withFixture(tests.scala:18)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m

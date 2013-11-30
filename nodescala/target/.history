@@ -1,0 +1,24 @@
+compile
+version
+about
+compile
+help
+tasks
+clean
+compile
+exit
+compile
+package
+run
+test-only
+last assignment/test:test-only
+test
+last assignment/test:test-only
+reload
+test
+compile
+reload
+tasks
+reload
+test
+exit

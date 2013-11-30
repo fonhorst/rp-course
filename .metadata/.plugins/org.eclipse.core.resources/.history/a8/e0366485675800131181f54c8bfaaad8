@@ -1,0 +1,179 @@
+package simulations
+
+import math.random
+import scala.collection.mutable.HashSet
+
+class EpidemySimulator extends Simulator {
+
+  def randomBelow(i: Int) = (random * i).toInt
+
+  protected[simulations] object SimConfig {
+    val population: Int = 300
+    val roomRows: Int = 8
+    val roomColumns: Int = 8
+    val transmissibilityRate:Int = 40
+    val prevalenceRate:Int = 1
+
+    // to complete: additional parameters of simulation
+  }
+
+  import SimConfig._
+  import SimHelper._
+
+  val persons: List[Person] = createPopulation//List() // to complete: construct list of persons
+
+  class Situation(var healthy: Int, var sick: Int, var immune: Int) {
+    def reset { healthy = 0; sick = 0; immune = 0 }
+    def count(p: Person) {
+      if (p.immune) immune += 1
+      else if (p.sick) sick += 1
+      else healthy += 1
+    }
+    override def toString() = "Situation(" + healthy + ", " + sick + ", " + immune + ")"
+  }
+  
+  class Person (val id: Int) {
+   println("i'm here " + id)
+    var infected = false
+    var sick = false
+    var immune = false
+    var dead = false
+
+    // demonstrates random number generation
+    var row: Int = randomBelow(roomRows)
+    var col: Int = randomBelow(roomColumns)
+
+    //
+    // to complete with simulation logic
+    //
+    
+    var ticsForNextMove:Int = 0 
+    
+    var infectedDays:Int = 0
+  
+    def apply():Unit={
+     
+     if (dead)
+       return
+       
+       
+     
+      if (infected && infectedDays == 6){
+        sick  = true
+      }
+     
+     if (infected && infectedDays == 14){
+       val rate = randomBelow(100)
+       if (rate <= 25){
+    	   dead = true
+       }
+     }
+     
+      if (infected && infectedDays == 16){
+       immune = true
+       sick = false
+     }
+      
+     if (infected && infectedDays == 18){
+       immune = false
+       infected = false
+       infectedDays = 0
+       
+     }
+     
+     if (infected){
+       infectedDays +=1
+     }
+     
+      
+      
+      
+     
+      def moveUp() = row = cycling(row -1,roomRows)
+      def moveDown() = row = cycling(row +1,roomRows)
+      def moveLeft() = col = cycling(col -1,roomColumns)
+      def moveRight() = col = cycling(col +1,roomColumns)
+      
+      //println("Id== " + id + " ticsForNextMove==" + ticsForNextMove)
+      
+      val isMoving = decideToMove
+      
+      if(!isMoving){
+        val roommates = persons.filter((p)=>p.id!=id && p.row==row && p.col == col)
+        
+        val isInfected = roommates.exists(_.infected)
+        
+        if (!immune && !infected && isInfected){
+           val rate = randomBelow(100)
+	       if (rate <= transmissibilityRate){
+	    	   infected = true
+	       }
+        }
+        
+        return
+      }
+        
+      val upRoomSick = persons.exists((p)=> p.row==moveUp && p.col == col && p.sick)
+      val downRoomSick = persons.exists((p)=> p.row==moveDown && p.col == col && p.sick)
+      val leftRoomSick = persons.exists((p)=> p.row==row && p.col == moveLeft && p.sick)
+      val rightRoomSick = persons.exists((p)=> p.row==row && p.col == moveRight && p.sick)
+      
+      var sides = new HashSet[Int]()
+      if (!upRoomSick){
+        sides += 0
+      }
+      if (!downRoomSick){
+        sides += 1
+      }
+      if (!leftRoomSick){
+        sides += 2
+      }
+      if (!rightRoomSick){
+        sides += 3
+      }
+      
+      if (sides.size == 0)
+        return
+      
+      val side = randomBelow(sides.size)
+      sides.toList(side) match {
+        case 0 => moveUp
+        case 1 => moveDown
+        case 2 => moveLeft
+        case 3 => moveRight
+      }
+   }
+    private def decideToMove():Boolean={
+        val buf = (5 - ticsForNextMove)
+        val seed = if (buf==0) 100 else 100/buf.toInt
+        val res = randomBelow(100)
+      
+	      if (res > seed){
+	        ticsForNextMove+=1
+	        return false
+	      }
+        ticsForNextMove = 0
+        true
+      }
+  }
+  
+  object SimHelper{
+    def createPopulation = {
+      val result = for (i <-0 to population-1) yield new Person(i)
+      val infectedCount = population * prevalenceRate/100
+      var previousChosen:List[Person] = List()
+      def chooseRandomCitizen():Person = {
+        var forInfection:Person = null
+        while(previousChosen.contains((forInfection = persons(randomBelow(population))))){}
+        previousChosen = forInfection::previousChosen
+        forInfection
+      }
+      for(i<-0 to infectedCount - 1){
+        
+      }
+      result.toList
+    }
+    
+    def cycling(m:Int, n:Int) = if (m == -1) n else m%n
+  }
+}
